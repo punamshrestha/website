@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make up Store</title>
+  <meta name="description " content="Make up Store"/>
+  <meta name= "Keywords" content="GAPS"/>
+  <meta name="author" content="Punam"/>
+  <!-- external link of css /-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--adding icon in the top of the website /-->
+  <link rel="icon"  href="images/logo.png"></link>
+  <style type="text/css">
+      img 
+    {
+      width: 100%;
+      height: 100%;
+    }
+    body{
+      
+      background-image: url('images/bg.png');
+    }
+    
+  </style>
+</head>
+
+<body>
+   
+  <main>
+    <!--adding logo and search bar to the header /-->
+    <headers>
+      <div class="container">
+        <div >
+          <div class="logo">
+          <h1> <font color="white"> GAPS COSMETICS</font> </h1>
+          </div>
+          <div class="top">
+          <input style="padding-top: 10px;" type="text" placeholder="Search for product or brands.">
+          </div>
+        </div>
+      </div>
+    </header>
+  </main>
+  <nav >
+    <!-- navigation bar /-->
+      <table style="width:80%;margin:auto;">
+        <tr> 
+          <th class="Current">
+            <a href="#"> <font color="white"> HOME </font></a>
+          </th>
+          <th class="Product">
+            <a href="pages/product.html"> <font color="white"> PRODUCTS</font></a>
+          </th>
+          <th class="Blog">
+            <a href="pages/blog.html"> <font color="white"> BLOG</font></a>
+          </th>
+          <th class="Research">
+            <a href="pages/research.html"><font color="white"> RESEARCH</font> </a>
+          </th>
+          <th class="contact">
+            <a href="pages/contact.html"><font color="white"> CONTACT US</font></a>
+          </th>
+          <th class="About">
+            <a href="pages/about.html"> <font color="white"> ABOUT US</font> </a>
+          </th>
+        </tr>
+        <h2 style="margin-left: 400px"> <font color="white"> WELCOME TO GAPS COSMETICS!!</font></h2>
+      </table>
+  </nav>
+  <!-- making division class for image slider /-->
+  <div class="slider">
+    <div id="img">
+      <img src="images/e.png">
+    </div>
+
+  </div>
+  <!-- scrpit for  image slider /-->
+  <script>
+    var images= ['a.png', 'b.png', 'c.png', 'd.png','e.png'];
+    var x = 0;
+    var imgs = document.getElementById('img');
+    setInterval(slider, 2000);
+    function slider() {
+
+      if (x < images.length) {
+        x = x + 1;
+      } else {
+        x = 1;
+      }
+      imgs.innerHTML = "<img src=" +"images/"+ images[x - 1] + ">";
+    }
+  </script>
+  <h2 style="float: right;"> <font color="white">Find us on</font></h2>
+  <p><font color="white">
+    <p>Address:Chabahil, Kathmandu</p>
+    <p>Phone:9810-4201-8374</p>
+    <!--inserting external links of social media /-->
+    <div class="linkSection">
+        <a href="https://www.facebook.com/punam.shrestha.3591267"><img src="images/facebook.png" alt="facebook"></a>
+        <a href="https://www.twitter.com/PunamSh89187701"><img src="images/twitter.png" alt="twitter"></a>
+        <a href="https://www.instagram.com/shresthapunam703"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="https://www.linkedin.com/in/punam-s-a34747166"><img src="images/linkedin.png" alt="linkedin"></a>
+      </div>
+      <p id="date"></p>
+      <!-- Scrpit for displaying date and time. /-->
+        <script>
+          function display_date() {
+          document.getElementById('date').innerHTML = Date();
+          setTimeout(display_date,1000);
+        } 
+        display_date();
+        </script>
+  </font></p>
+  <!--   /-->
+  <footer>
+      <table width="100%">
+        <tr>
+          <th>
+          <div id="buttom" style="color:white;font-family:Courier New;">
+            <p>copyright &copy; 2019 Punam Shrestha </p>
+          </div>
+          </th>
+        </tr>
+      </table>
+    </footer>
+</body>
+
+</html>
